@@ -12,26 +12,21 @@ import {
   View,
   Image // Giúp hiển thị hình ảnh trong react native
 } from 'react-native';
-import Images from "./Images";
-
-class Bananas extends Component {
-  render() {
-    return (
-      <View>
-        <Text>{this.props.thach}</Text>
-        <Image source={this.props.pic} style={{ width: 193, height: 110 }} />
-      </View>
-    );
-  }
-}
-
+import ListItem from "./Components/ListItem";
+import FakeDataArray from "./FakeData";
 
 export default class App extends Component {
   render() {
-    let imageData = Images.banana;
     return (
       <View style={styles.container}>
-        <Bananas pic={imageData} thach="dep trai" />
+        {FakeDataArray.map((value, index) => {
+          // Destructing es6 object
+          const { avatar, userName } = value;
+          ///  avatar={avatar} userName={userName} tương đương {...value}
+          return (
+            <ListItem key={index} avatar={avatar} userName={userName} />
+          );
+        })}
       </View>
     );
   }
@@ -40,9 +35,8 @@ export default class App extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
     backgroundColor: '#F5FCFF',
+    margin: 10
   },
   welcome: {
     fontSize: 20,
