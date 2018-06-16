@@ -20,7 +20,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         {FakeDataArray.map((value, index) => {
-          // Destructing es6 object
+          //   Destructing es6 object
           const { avatar, userName } = value;
           ///  avatar={avatar} userName={userName} tương đương {...value}
           return (

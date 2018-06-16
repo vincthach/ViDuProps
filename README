@@ -1,0 +1,11 @@
+# Nắm được các hàm xử lý Array tiêu biểu: map, forEach, filter, ....
+# Nắm được các clone object trong es6: var objectMoi = {...ObjectCũ}
+# Nắm được các dùng hàm map tạo ra 1 list layout
+# Nắm được cách truyền props từ Component Parent vào Component Child
+# Nắm được cách gọi props trong component con 
+# Nắm được cách destructing object trong es6 
+# Nắm được closure và scope
+# Nắm được cách sử dụng image từ remote url hoặc từ local 
+# Nắm được cấu tạo của json object
+
+
