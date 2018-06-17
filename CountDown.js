@@ -13,18 +13,36 @@ import {
   Image, // Giúp hiển thị hình ảnh trong react native,
   TextInput
 } from 'react-native';
-import CountDown from "./CountDown";
-export default class App extends Component {
+
+export default class CountDown extends Component {
 
   constructor(props) {
     super(props);
+
+    const { date } = props;
+    var startDate = new Date();
+    // Do your operations
+    var endDate = new Date(date);
+    var seconds = (endDate.getTime() - startDate.getTime()) / 1000;
+    this.state = {
+      days: 0,
+      hours: 0,
+      minutes: 0,
+      seconds: seconds
+    }
   }
+
+  componentDidMount() {
+    // setInterval()
+  }
+
 
 
   render() {
     return (
+
       <View style={{ flex: 1, flexDirection: 'row', backgroundColor: "red", justifyContent: "space-between" }}>
-        <CountDown date={"Sep 17 2018 16:07:50"} />
+        <Text>{this.state.seconds}</Text>
       </View>
 
     );
