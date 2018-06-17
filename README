@@ -1,11 +1,13 @@
-# Nắm được các hàm xử lý Array tiêu biểu: map, forEach, filter, ....
-# Nắm được các clone object trong es6: var objectMoi = {...ObjectCũ}
-# Nắm được các dùng hàm map tạo ra 1 list layout
-# Nắm được cách truyền props từ Component Parent vào Component Child
-# Nắm được cách gọi props trong component con 
-# Nắm được cách destructing object trong es6 
-# Nắm được closure và scope
-# Nắm được cách sử dụng image từ remote url hoặc từ local 
-# Nắm được cấu tạo của json object
+# SU KHAC BIỆT GIỮA OBJECT ASSGIN VÀ ...
+var root = { a: 1 };
+// Tao object cung 1 dia chi vung nho voi root
+var a = Object.assign(root);
+// Tạo ra một object mới không trùn dia chi vung nho voi bien a 
+var b = Object.assign({}, root);
+// Clone object es6 
+var d = {...root};
+console.log(a === root);
+console.log(a === b);
+console.log(a === d);
 
 
